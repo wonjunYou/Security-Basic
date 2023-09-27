@@ -1,5 +1,6 @@
 package com.cos.jwtex01.controller;
 
+import com.cos.jwtex01.dto.SignUpRequest;
 import java.util.List;
 
 import org.springframework.security.core.Authentication;
@@ -64,7 +65,18 @@ public class RestApiController {
 		userRepository.save(user);
 		return "회원가입완료";
 	}
-	
+
+	@PostMapping(value = "sign-up")
+	public void signUp(@RequestBody SignUpRequest request) {
+
+		User user = User.builder()
+				.username(request.getUsername())
+				.password(bCryptPasswordEncoder.encode(request.getPassword()))
+				.roles("ROLE_USER")
+				.build();
+
+		userRepository.save(user);
+	}
 }
 
 
