@@ -67,3 +67,6 @@ https://bezkoder.com/spring-boot-react-jwt-auth/
 ![blog](https://postfiles.pstatic.net/MjAyMDA4MTBfMzQg/MDAxNTk3MDM2OTc1NjQ0.3bgXzd_Bf7JoS1fsYIyGP1DAl9kQZ8IA-_WW74GyaFcg.Vtp4R4c4X1zakxFzEk212VqkTsQhI0bRmPZft9ZQ92og.PNG.getinthere/Screenshot_31.png?type=w773)
 
 ![blog](https://postfiles.pstatic.net/MjAyMDA4MTBfMjMy/MDAxNTk3MDM2OTc1NjM2.vXqNYRrbfievaF0YrELs8Rj-QW5gMmkoXRmIor3VDrEg.VR5lD5t-6T6FiFXd5bEopgLPR02oSuvzCjYNVFPlqaYg.PNG.getinthere/Screenshot_32.png?type=w773)
+
+## MYSQL 초기 세팅
+docker run -d --name mysql-container -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root_password -e MYSQL_DATABASE=security -e MYSQL_USER=cos -e MYSQL_PASSWORD=cos1234 -e TZ=Asia/Seoul mysql:8.0
